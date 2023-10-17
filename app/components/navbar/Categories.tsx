@@ -17,7 +17,7 @@ import { FaSkiing } from 'react-icons/fa';
 import { BsSnow } from 'react-icons/bs';
 import { IoDiamond } from 'react-icons/io5';
 import CategoryBox from '../CategoryBox';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 export const categories = [
 	{
@@ -98,6 +98,7 @@ export const categories = [
 ];
 
 const Categories = () => {
+	const router = useRouter();
 	const params = useSearchParams();
 	const category = params?.get('category');
 	const pathname = usePathname();

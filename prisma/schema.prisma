@@ -21,6 +21,7 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   favoriteIds String[] @db.ObjectId
+  addToCartIds String[] @db.ObjectId
 
   accounts Account[]
   listings Listing[]
